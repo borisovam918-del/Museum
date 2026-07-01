@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги и запись — Музей "Волжский гараж"</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styless.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Главный контейнер макета (Строго 1440px x 2380px) -->
+    <div id="canvas-layout">
+        
+        <!-- 1. ШАПКА (С возвратом на Главную) -->
+        <header class="header-top">
+            <a href="index.html" style="text-decoration: none; color: inherit; flex-grow: 1; padding-left: 40px;">
+                <h1 class="header-title" title="Вернуться на главную">Музей ретро-автомобилей<br>“Волжский гараж”</h1>
+            </a>
+            <a href="index.html" class="header-logo" title="Вернуться на главную">
+                <img src="images/Логотип.jpg" alt="Логотип">
+            </a>
+        </header>
+
+        <!-- 2. НАВИГАЦИОННАЯ ПАНЕЛЬ -->
+        <nav class="retro-nav">
+            <div class="nav-container">
+                <a href="index.html" class="nav-link-btn back-to-main">Главная страница</a>
+                <div class="nav-separator"></div>
+                <a href="#about-museum" class="nav-link-btn">О музее</a>
+                <div class="nav-separator"></div>
+                <a href="#booking-section" class="nav-link-btn">Записаться на прием</a>
+            </div>
+        </nav>
+
+        <!-- ОСНОВНОЙ КОНТЕНТ -->
+        <main class="main-content">
+            
+            <!-- БЛОК 1: ИНФОРМАЦИЯ О МУЗЕЕ -->
+            <div class="info-card" id="about-museum">
+                <h1>Информация о музее</h1>
+                <p class="info-text">
+                    Интерактивный музей «Волжский гараж» — это уникальное историко-техническое пространство, созданное для сохранения памяти о золотой эпохе отечественной автомобильной промышленности. Наш выставочный комплекс располагает уникальными ходовыми экспонатами марок ВАЗ, ГАЗ, ЗАЗ и АЗЛК, которые были детально воссозданы и отреставрированы силами лучших специалистов Тольятти. 
+                </p>
+                <p class="info-text mt-3">
+                    Мы предлагаем гостям не просто сухой просмотр техники, а глубокое погружение в историю: у нас можно услышать реальный рев моторов ретро-классики, изучить оригинальные чертежи и посидеть в салонах легендарных машин. Музей ведет активную научную и просветительскую деятельность, организуя открытые лекции для студентов технических колледжей.
+                </p>
+            </div>
+
+            <!-- БЛОК 2: ВАРИАНТЫ ПОСЕЩЕНИЯ -->
+            <div class="info-card" id="visit-options">
+                <h2>Варианты посещения</h2>
+                <div class="visit-options-grid">
+                    
+                    <div class="option-box">
+                        <h3>Групповые экскурсии</h3>
+                        <p>Интерактивная программа для групп от 5 человек. Погружение в историю создания советских автогигантов.</p>
+                    </div>
+
+                    <div class="option-box">
+                        <h4>Для школьников</h4>
+                        <p>Адаптированные профориентационные экскурсии с игровыми элементами, квестами и изучением основ автомеханики.</p>
+                    </div>
+
+                    <div class="option-box">
+                        <h4>Для студентов</h4>
+                        <p>Профильные технические семинары, глубокий разбор конструктивных особенностей ВАЗ и ГАЗ, лекции инженеров.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- БЛОК 3: ЦЕНЫ НА БИЛЕТЫ -->
+            <div class="info-card" id="tickets">
+                <h3>Цена на билеты</h3>
+                <table class="price-table">
+                    <thead>
+                        <tr>
+                            <th>Категория билета</th>
+                            <th>Стоимость</th>
+                            <th>Что входит в стоимость</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Взрослый билет</strong></td>
+                            <td>500 рублей</td>
+                            <td>Полный доступ к экспозициям, возможность фотосъемки, аудиогид по музею.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Детский билет (от 7 до 16 лет)</strong></td>
+                            <td>250 рублей</td>
+                            <td>Доступ ко всем залам, участие в интерактивных зонах и симуляторах.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Бесплатный билет</strong></td>
+                            <td>0 рублей</td>
+                            <td>Для детей до 7 лет, ветеранов Великой Отечественной войны и инвалидов I и II групп.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- БЛОК 4: ЗАПИСЬ НА ЭКСКУРСИЮ -->
+            <div class="info-card" id="booking-section">
+                <h3>Запись на экскурсию</h3>
+                
+                <form action="#" method="POST" class="booking-form" onsubmit="alert('Вы успешно записались! Ждем вас в Волжском гараже.'); return false;">
+                    <div>
+                        <label class="form-label" for="userName">Ваше имя и фамилия</label>
+                        <input type="text" class="form-control" id="userName" placeholder="Иванов Иван" required>
+                    </div>
+
+                    <div>
+                        <label class="form-label" for="userPhone">Номер телефона</label>
+                        <input type="tel" class="form-control" id="userPhone" placeholder="+7 (999) 999-99-99" required>
+                    </div>
+
+                    <div>
+                        <label class="form-label" for="bookingDate">Выберите дату посещения</label>
+                        <input type="date" class="form-control" id="bookingDate" required>
+                    </div>
+
+                    <div>
+                        <label class="form-label" for="visitType">Вариант посещения</label>
+                        <select class="form-select" id="visitType" required>
+                            <option value="" disabled selected>Выберите вариант</option>
+                            <option value="group">Групповая экскурсия</option>
+                            <option value="school">Экскурсия для школьников</option>
+                            <option value="student">Семинар для студентов</option>
+                            <option value="individual">Индивидуальный визит</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group-full">
+                        <label class="form-label" for="userComment">Дополнительная информация (количество человек, возраст)</label>
+                        <textarea class="form-control" id="userComment" rows="3" placeholder="Например: группа школьников 15 человек, нужен экскурсовод"></textarea>
+                    </div>
+
+                    <div class="form-group-full">
+                        <button type="submit" class="submit-btn">Отправить заявку на бронирование</button>
+                    </div>
+                </form>
+            </div>
+
+        </main>
+
+        <!-- 6. ПОДВАЛ -->
+        <footer class="footer-bottom container-fluid">
+            <div class="row m-0">
+                <div class="col-4 ps-0">
+                    <h4>О музее</h4>
+                    <p>Инн: 9999999999</p>
+                    <p>Адрес: Южное шоссе, д.21</p>
+                    <p>Наименование:<br>“Волжский гараж”</p>
+                </div>
+                <div class="col-4 text-center">
+                    <h4>Экскурсии</h4>
+                    <!-- Кросс-ссылки внутри страницы -->
+                    <p><a href="#visit-options">Интерактивные экскурсии</a></p>
+                    <p><a href="#visit-options">Семинары и лекции</a></p>
+                    <p><a href="#visit-options">Семейные экскурсии</a></p>
+                </div>
+                <div class="col-4 text-end pe-0">
+                    <h4>Контакты</h4>
+                    <!-- Ссылки на отзывы ведут обратно на главную страницу -->
+                    <p>Отзывы: <a href="index.html#reviews-anchor">Читать отзывы</a></p>
+                    <p>Электронная почта:<br><a href="mailto:myz1@gmail.com">myz1@gmail.com</a></p>
+                    <p>Телефон:<br>+7(999)-999-99-99</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

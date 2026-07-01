@@ -1,0 +1,321 @@
+/* Базовые настройки холста 1440px на 2380px */
+body {
+    background-color: #122010;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#canvas-layout {
+    width: 1920px;
+    height: 2380px;
+    background-color: #cbe8c5; /* Фирменный светло-зеленый фон */
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, .retro-title {
+    font-family: 'Playfair Display', serif;
+    color: #1e331b;
+    font-weight: 800;
+}
+
+/* 1. СЕКЦИЯ: ШАПКА */
+.header-top {
+    background-color: #a6d29b;
+    padding: 30px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 4px solid #1e331b;
+    height: 200px;
+    flex-shrink: 0;
+}
+
+.hamburger-btn {
+    width: 60px;
+    cursor: pointer;
+}
+.hamburger-btn span {
+    display: block;
+    width: 45px;
+    height: 5px;
+    background-color: #1e331b;
+    margin: 8px 0;
+    border-radius: 2px;
+}
+
+.header-title {
+    font-size: 38px;
+    text-align: left;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.header-logo {
+    width: 140px;
+    height: 140px;
+    background-color: #000000;
+    border: 4px solid #1e331b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    transition: transform 0.2s;
+}
+
+.header-logo:hover {
+    transform: scale(1.05);
+}
+
+.header-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: invert(1);
+}
+
+/* 2. СЕКЦИЯ: НАВИГАЦИОННАЯ ПАНЕЛЬ */
+.retro-nav {
+    background-color: #2d5a27;
+    border-bottom: 4px solid #1e331b;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.retro-nav .nav-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 0 100px;
+}
+
+.retro-nav .nav-link-btn {
+    color: #cbe8c5;
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.2s;
+    display: inline-block;
+}
+
+.retro-nav .nav-link-btn:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.back-to-main {
+    color: #ffffff;
+    border-bottom: 3px dashed #ffffff;
+    padding-bottom: 3px;
+}
+
+.nav-separator {
+    width: 15px;
+    height: 15px;
+    background-color: #ffffff;
+}
+
+/* ОСНОВНОЙ КОНТЕНТ СТРАНИЦЫ */
+.main-content {
+    padding: 50px;
+    flex-shrink: 0;
+}
+
+/* Карточки-блоки */
+.info-card {
+    background-color: #a6d29b;
+    border: 4px solid #1e331b;
+    padding: 40px;
+    margin-bottom: 35px;
+}
+
+.info-card h3 {
+    text-align: center;
+    font-size: 34px;
+    border-bottom: 3px solid #1e331b;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+
+.info-text {
+    font-size: 22px;
+    line-height: 1.6;
+    color: #1e331b;
+    text-align: justify;
+}
+
+/* 3. СЕКЦИЯ: ВАРИАНТЫ ПОСЕЩЕНИЯ */
+.visit-options-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.option-box {
+    background-color: #cbe8c5;
+    border: 3px solid #1e331b;
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.option-box:hover {
+    transform: scale(1.03);
+    background-color: #32b61b;
+}
+
+.option-box h4 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #1e331b;
+    padding-bottom: 10px;
+}
+
+.option-box p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #1e331b;
+    margin: 0;
+}
+
+/* 4. СЕКЦИЯ: ЦЕНЫ НА БИЛЕТЫ */
+.price-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.price-table th, .price-table td {
+    border: 3px solid #1e331b;
+    padding: 15px 25px;
+    font-size: 22px;
+    text-align: left;
+}
+
+.price-table th {
+    background-color: #2d5a27;
+    color: #ffffff;
+    font-family: 'Playfair Display', serif;
+}
+
+.price-table td {
+    background-color: #cbe8c5;
+    color: #1e331b;
+}
+
+/* 5. СЕКЦИЯ: ФОРМА ЗАПИСИ НА ЭКСКУРСИЮ */
+.booking-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.form-group-full {
+    grid-column: span 2;
+}
+
+.form-label {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1e331b;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.form-control, .form-select {
+    background-color: #cbe8c5;
+    border: 3px solid #1e331b;
+    border-radius: 0px;
+    font-size: 20px;
+    color: #1e331b;
+    padding: 12px 20px;
+}
+
+.form-control:focus, .form-select:focus {
+    background-color: #ffffff;
+    box-shadow: none;
+    border-color: #2d5a27;
+}
+
+/* Кнопка отправки формы */
+.submit-btn {
+    background-color: #2d5a27;
+    color: #ffffff;
+    border: 3px solid #1e331b;
+    padding: 15px 40px;
+    font-size: 24px;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.submit-btn:hover {
+    background-color: #1e331b;
+    color: #cbe8c5;
+}
+
+/* 6. СЕКЦИЯ: ПОДВАЛ */
+.footer-bottom {
+    background-color: #a6d29b;
+    border-top: 4px solid #1e331b;
+    padding: 60px;
+    font-size: 22px;
+    flex-shrink: 0;
+}
+
+.footer-bottom h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: #1e331b;
+    border-bottom: 3px solid #1e331b;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.footer-bottom p {
+    margin-bottom: 12px;
+    color: #1e331b;
+}
+
+.footer-bottom a {
+    color: #1e331b;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+@media (max-width:1430px){
+    .visit-options-grid{grid-template-columns:repeat(2,1fr)}
+    .layout-container{padding:12px}
+  }
+  @media (max-width:768px){
+    .visit-options-grid{grid-template-columns:1fr}
+    .form-row{grid-template-columns:1fr}
+    .btn-cta{width:100%}
+    .footer-bottom .row{flex-direction: column; gap: 20px;}
+  }
+  @media (max-width:320px){
+    .info-card h2{font-size:18px}
+  }

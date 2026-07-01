@@ -1,0 +1,196 @@
+
+   <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Музей ретро-автомобилей">
+<meta name="keywords" content="ретро-автомобиль, музей, автомобиль, машина">
+
+
+<!-- Open Graph для соцсетей -->
+<meta property="og:title" content="Музей ретро-автомобилей Волжский гараж">
+<meta property="og:description" content="Музей ретро-автомобилей">
+<meta property="og:image" content="/images/preview.jpg">
+
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+
+
+    <title>Музей ретро-автомобилей "Волжский гараж"</title>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+    <div id="canvas-layout">       
+        <!-- 1. ШАПКА --> 
+        <header class="header-top">
+            <h1 class="header-title">Музей ретро-автомобилей<br>“Волжский гараж”</h1>
+            <div class="header-logo">
+                <img src="images/Логотип.jpg" alt="Логотип">
+            </div>
+        </header>
+
+        <!-- 2. БАННЕР -->
+        <div class="hero-banner"></div>
+
+        <!-- 3. НАВИГАЦИОННАЯ ПАНЕЛЬ С ВЫПАДАЮЩИМИ СПИСКАМИ -->
+        <nav class="retro-nav">
+            <div class="nav-container">
+                
+                <!-- Меню: О музее -->
+                <div class="dropdownn">
+                <a href="booking.html" class="nav-link-btn">О музее</a>
+                </div>
+                <div class="nav-separator"></div>
+
+                <!-- Меню: Отзывы -->
+                <div class="dropdownh">
+                    <a href="index.html#reviews-anchor" class="nav-link-btn">Отзывы</a>
+                </div>
+                <div class="nav-separator"></div>
+
+                <!-- Кнопка: Записаться -->
+                <div class="dropdownm">
+                    <a href="booking.html#booking-section" class="nav-link-btn">Записаться</a>
+                </div>
+
+            </div>
+        </nav>
+
+        <!-- 4. КОНТЕНТ (ДВЕ КОЛОНКИ) -->
+        <main class="main-content container-fluid">
+            <div class="row m-0">
+                
+                <!-- Левая колонка (Варианты и билеты с рабочими ссылками) -->
+                <div class="col-5 ps-0 pe-4">
+                    
+                    <div class="info-card">
+                        <h1>Варианты посещения</h1>
+                        <ul>
+                            <li><a href="booking.html#visit-options">Групповые экскурсии</a></li>
+                            <li><a href="booking.html#visit-options">Для школьников</a></li>
+                            <li><a href="booking.html#visit-options">Для студентов</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card mb-0">
+                        <h2>Билеты</h2>
+                        <ul>
+                            <li><a href="booking.html#tickets">Взрослый билет</a></li>
+                            <li><a href="booking.html#tickets">Детский билет</a></li>
+                            <li><a href="booking.html#tickets">Бесплатный билет</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <!-- Правая колонка -->
+                <div class="col-7 pe-0 ps-4">
+                    <div class="info-card h-100 mt-2">
+                        <h3>История АвтоВАЗа</h3>
+                        <p class="history-text">
+                            1966 год 20 июля советское правительство приняло постановление о строительстве завода в Тольятти. 
+                            Страна нуждалась в массовом «народном» автомобиле, а мощностей тогдашних заводов не хватало. 
+                            Для ускорения задачи привлекли иностранного партнёра — итальянский Fiat. 
+                            15 августа глава Fiat подписал контракт. Строительство объявили Всесоюзной ударной комсомольской стройкой — тысячи молодых специалистов приехали в Тольятти. 
+                            Завод возвели рекордно быстро — за три с половиной года вместо шести.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- 5. СЕКЦИЯ: ОТЗЫВЫ -->
+        <section class="reviews-section" id="reviews-anchor">
+            <div class="reviews-container">
+                <h3 class="text-center mb-4" style="font-size: 36px; border-bottom: 3px solid #1e331b; padding-bottom: 10px;">Отзывы наших посетителей</h3>
+                <div class="row">
+                    
+                    <!-- Колонка: Положительные отзывы -->
+                    <div class="col-6 pe-3" id="reviews-positive">
+                        <h4 class="mb-3 text-center" style="color: #2d5a27;">👍 Положительные отзывы</h4>
+                        
+                        <div class="review-box positive-review">
+                            <p class="review-author">Сергей, г. Тольятти</p>
+                            <p class="review-text">«Прекрасный музей! Волга ГАЗ-21 выглядит так, будто только что сошла с конвейера. Очень понравилось, что можно послушать рев мотора.»</p>
+                        </div>
+
+                        <div class="review-box positive-review">
+                            <p class="review-author">Мария, студентка ТПК</p>
+                            <p class="review-text">«Приходили сюда всей группой на лекцию по истории дизайна АвтоВАЗа. Невероятная атмосфера, экскурсовод рассказывал потрясающе!»</p>
+                        </div>
+                    </div>
+
+                    <!-- Колонка: Отрицательные / Критические отзывы -->
+                    <div class="col-6 ps-3" id="reviews-negative">
+                        <h4 class="mb-3 text-center" style="color: #8b2626;">💬 Замечания и предложения</h4>
+                        
+                        <div class="review-box negative-review">
+                            <p class="review-author">Дмитрий, г. Самара</p>
+                            <p class="review-text">«Экспонаты шикарные, но в выходные дни очень много людей, тяжело сфотографировать машины без посторонних в кадре. Рекомендую записываться заранее.»</p>
+                        </div>
+
+                        <div class="review-box negative-review">
+                            <p class="review-author">Ольга Петровна</p>
+                            <p class="review-text">«Жаль, что нельзя посидеть внутри абсолютно всех машин в галерее. Понимаю, что это ретро-наследие, но детям очень хочется покрутить руль.»</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. ГАЛЕРЕЯ ЭКСПОНАТОВ -->
+        <section class="gallery-section">
+            <h2 class="gallery-title">Галерея экспонатов</h2>
+            <div class="carousel-container">
+                <div id="retroCarCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="images/Ford_Mustang.jpg" alt="Ford_Mustang">
+                            <div class="hover-info-panel">
+                                <h3>Ford Mustang</h3>
+                                <p>Культовый американский автомобиль, положивший начало целому классу так называемых "пони-каров".</p>
+                                <p style="color:#fff; font-weight:bold; font-size: 20px;">Двигатель базовый - рядный шестилициндровый Thriftpower объёмом 2,8 литров.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. ПОДВАЛ -->
+        <footer class="footer-bottom container-fluid">
+            <div class="row m-0">
+                <div class="col-4 ps-0">
+                    <h4>О музее</h4>
+                    <p>Инн: 9999999999</p>
+                    <p>Адрес: Южное шоссе, д.21</p>
+                    <p>Наименование:<br>“Волжский гараж”</p>
+                </div>
+                <div class="col-4 text-center">
+                    <h4>Экскурсии</h4>
+                    <!-- Ссылки ведут на конкретные блоки второстепенной формы -->
+                    <p><a href="booking.html#visit-options">Интерактивные экскурсии</a></p>
+                    <p><a href="booking.html#visit-options">Семинары и лекции</a></p>
+                    <p><a href="booking.html#visit-options">Семейные экскурсии</a></p>
+                </div>
+                <div class="col-4 text-end pe-0">
+                    <h4>Контакты</h4>
+                    <p>Отзывы: <a href="#reviews-anchor" >Читать отзывы</a></p>
+                    <p>Электронная почта:<br><a href="mailto:myz1@gmail.com">myz1@gmail.com</a></p>
+                    <p>Телефон:<br>+7(999)-999-99-99</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
