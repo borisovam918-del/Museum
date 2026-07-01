@@ -1,0 +1,418 @@
+/* Базовые настройки холста 1440px на 2380px */
+body {
+    background-color: #445e4a; /* Темный фон вокруг макета */
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#canvas-layout {
+    max-width: 1920px;
+    width: 100%;
+    height: auto;
+    background-color: #cbe8c5; /* Светло-зеленый фон холста */
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* Плавный скролл по якорям */
+html {
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, .retro-title {
+    font-family: 'Playfair Display', serif;
+    color: #1e331b;
+    font-weight: 800;
+}
+
+/* 1. СЕКЦИЯ: ШАПКА */
+.header-top {
+    background-color: #9c9c9c;
+    padding: 30px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 4px solid #1e331b;
+    height: 200px;
+    flex-shrink: 0;
+}
+
+.hamburger-btn {
+    width: 60px;
+    cursor: pointer;
+}
+.hamburger-btn span {
+    display: block;
+    width: 45px;
+    height: 5px;
+    background-color: #1e331b;
+    margin: 8px 0;
+    border-radius: 2px;
+}
+
+.header-title {
+    font-size: 38px;
+    text-align: left;
+    margin: 0;
+    line-height: 1.2;
+    flex-grow: 1;
+    padding-left: 40px;
+}
+
+.header-logo {
+    width: 140px;
+    height: 140px;
+    background-color: #000000;
+    border: 4px solid #1e331b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+.header-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: invert(1);
+}
+
+/* 2. СЕКЦИЯ: БАННЕР С МАШИНАМИ */
+.hero-banner {
+    height: 400px;
+    background-image: url('Баннер (1).jpg');
+    background-size: cover;
+    background-position: center;
+    border-bottom: 4px solid #1e331b;
+    flex-shrink: 0;
+}
+
+/* 3. СЕКЦИЯ: НАВИГАЦИОННАЯ ПАНЕЛЬ */
+.retro-nav {
+    background-color: #2d5a27;
+    border-bottom: 4px solid #1e331b;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.dropdownn:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.dropdownh:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.dropdownm:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+.retro-nav .nav-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 0 100px;
+}
+
+.retro-nav .dropdown-toggle, .retro-nav .nav-link-btn {
+    color: #cbe8c5;
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    background: none;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+.retro-nav .retro-nav .nav-link-btn:hover {
+    color: #ffffff;
+}
+
+.nav-separator {
+    width: 15px;
+    height: 15px;
+    background-color: #ffffff;
+}
+
+/* Настройки выпадающего меню */
+.dropdown-menu {
+    background-color: #2d5a27;
+    border: 4px solid #1e331b;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.dropdown-item {
+    color: #cbe8c5;
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    padding: 15px 30px;
+    text-align: center;
+    border-bottom: 2px solid #1e331b;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-item:last-child {
+    border-bottom: none;
+}
+
+.dropdown-item:hover {
+    background-color: #1e331b;
+    color: #ffffff;
+}
+
+/* 4. СЕКЦИЯ: ДВУХКОЛОНОЧНЫЙ КОНТЕНТ */
+.main-content {
+    padding: 50px;
+    flex-shrink: 0;
+}
+
+.info-card {
+    background-color: #a6d29b;
+    border: 4px solid #1e331b;
+    padding: 35px;
+    margin-bottom: 40px;
+}
+
+.info-card h3 {
+    text-align: center;
+    font-size: 32px;
+    border-bottom: 3px solid #1e331b;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+
+/* Кликабельные элементы списков в левой колонке */
+.info-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 24px;
+    line-height: 2.2;
+}
+
+.info-card ul li a {
+    color: #1e331b;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.info-card ul li a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.info-card ul li::before {
+    content: "• ";
+    color: #1e331b;
+    font-weight: bold;
+    font-size: 28px;
+    margin-right: 10px;
+}
+
+.history-text {
+    font-size: 24px;
+    line-height: 1.7;
+    color: #1e331b;
+    text-align: justify;
+}
+
+/* 5. СЕКЦИЯ: ОТЗЫВЫ (ПОЛОЖИТЕЛЬНЫЕ И ОТРИЦАТЕЛЬНЫЕ) */
+.reviews-section {
+    background-color: #cbe8c5;
+    padding: 0 50px 50px 50px;
+    flex-shrink: 0;
+}
+
+.reviews-container {
+    border: 4px solid #1e331b;
+    background-color: #a6d29b;
+    padding: 40px;
+}
+
+.review-box {
+    background-color: #cbe8c5;
+    border: 3px solid #1e331b;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+/* Выделение положительных отзывов */
+.positive-review {
+    border-left: 10px solid #2d5a27;
+}
+
+/* Выделение отрицательных/критических отзывов */
+.negative-review {
+    border-left: 10px solid #8b2626;
+}
+
+.review-author {
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-size: 22px;
+    color: #1e331b;
+    margin-bottom: 5px;
+}
+
+.review-text {
+    font-size: 18px;
+    color: #1e331b;
+    margin: 0;
+    font-style: italic;
+}
+
+/* 6. СЕКЦИЯ: ГАЛЕРЕЯ ЭКСПОНАТОВ (С КАРУСЕЛЬЮ) */
+.gallery-section {
+    background-color: #a6d29b;
+    border-top: 4px solid #1e331b;
+    border-bottom: 4px solid #1e331b;
+    padding: 50px;
+    flex-shrink: 0;
+}
+
+.gallery-title {
+    font-size: 46px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.carousel-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    border: 5px solid #1e331b;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-item {
+    height: 500px;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Скрытая инфо-панель */
+.hover-info-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(18, 32, 16, 0.95);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.carousel-container:hover .hover-info-panel {
+    opacity: 1;
+}
+
+.hover-info-panel h3 {
+    color: #ffffff;
+    font-size: 42px;
+    border-bottom: 2px solid #cbe8c5;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+
+.hover-info-panel p {
+    color: #cbe8c5;
+    font-size: 24px;
+    line-height: 1.6;
+    max-width: 800px;
+}
+
+/* 7. СЕКЦИЯ: ПОДВАЛ (ФУТЕР) */
+.footer-bottom {
+    background-color: #a6d29b;
+    border-top: 4px solid #1e331b;
+    padding: 60px;
+    font-size: 22px;
+    flex-shrink: 0;
+}
+
+.footer-bottom h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: #1e331b;
+    border-bottom: 3px solid #1e331b;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.footer-bottom p {
+    margin-bottom: 12px;
+    color: #1e331b;
+}
+
+.footer-bottom a {
+    color: #1e331b;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-bottom a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/*Адаптивность*/
+@media (max-width: 1430px){
+    #canvas-layiut {min-height: 1430px;}
+    .main-content .row{flex-direction: column;}
+    .col-5, .col-7 {width: 100%; max-width: 100%; padding: 0;}
+    .hero-banner{height: 300px;}
+    .carousel-item{height: 400px;}
+    .main-content{padding: 30px 20px;}
+    .info-card{padding: 25px; margin-bottom: 25px;}
+    .footer-bottom{padding: 40px 20px;}
+}
+
+@media (max-width: 768px){
+    .reviews-container .row {flex-direction: column;}
+    .col-6 {width: 100%; padding: 0;}
+    .hamburger-btn {display: block;}
+    .header-top {padding: 15px 20px;}
+    .header-logo img {width: 90px; height: 90px;}
+    .header-title {font-size: 24px;}
+    .hero-banner {height: 200px;}
+    .carousel-item {height: 280px;}
+    .history-text{font-size: 18px;}
+    .footer-bottom .row{flex-direction: column; gap: 20px;}
+}
+
+@media (max-width:320px){
+    #canvas-layiut {min-height: 960px;}
+    .header-title{font-size: 18px;}
+    .header-logo img {width: 70px; height: 70px;}
+    .hero-banner {height: 160px;}
+    .carousel-item {height: 220px;}
+    .info-card h3, .gallery-title {font-size: 22px;}
+    .history-text, .review-text {font-size: 15px;}
+}
